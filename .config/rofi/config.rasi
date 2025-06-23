@@ -4,4 +4,4 @@ terminal: "ghostty";
 xoffset: 0;
 yoffset: 0;
 }
-@theme "custom"
+@theme "catppuccin-default"

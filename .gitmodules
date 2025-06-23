@@ -1,3 +1,9 @@
 [submodule ".config/wlogout/catppuccin-wlogout"]
 	path = .config/wlogout/catppuccin-wlogout
 	url = https://github.com/catppuccin/wlogout
+[submodule ".config/Kvantum/catppuccin-kvantum"]
+	path = .config/Kvantum/catppuccin-kvantum
+	url = https://github.com/catppuccin/Kvantum
+[submodule ".config/tmux/catppuccin-tmux"]
+	path = .config/tmux/catppuccin-tmux
+	url = https://github.com/catppuccin/tmux
