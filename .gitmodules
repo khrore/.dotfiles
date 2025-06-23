@@ -1,0 +1,3 @@
+[submodule ".config/wlogout/catppuccin-wlogout"]
+	path = .config/wlogout/catppuccin-wlogout
+	url = https://github.com/catppuccin/wlogout

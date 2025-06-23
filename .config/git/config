@@ -1,0 +1,10 @@
+[alias]
+	ga = "git add"
+	gc = "git commit"
+	gl = "git log"
+	gp = "git push"
+	gs = "git status"
+
+[user]
+	email = "super.stas.0978@gmail.com"
+	name = "khrore"
