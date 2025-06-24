@@ -207,12 +207,13 @@ prefers_reduced_motion = false
    "vi",
    "v",
    "z",
-   "y"
+   "y",
+   "gs"
  ]
 
 [keys]
 # Defaults to true. If disabled, using the up/down key won't exit the TUI when scrolled past the first/last entry.
-# scroll_exits = true
+# scroll_exits = false
 # Defaults to true. The left arrow key will exit the TUI when scrolling before the first character
 # exit_past_line_start = true
 # Defaults to true. The right arrow key performs the same functionality as Tab and copies the selected line to the command line to be modified.
@@ -230,7 +231,7 @@ records = true
 # auto: length of the selected command.
 # static: length of the longest command stored in the history.
 # fixed: use max_preview_height as fixed height.
- strategy = "auto"
+strategy = "auto"
 
 [daemon]
 # # Enables using the daemon to sync. Requires the daemon to be running in the background. Start it with `atuin daemon`
