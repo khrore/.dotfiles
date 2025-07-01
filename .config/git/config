@@ -1,9 +1,9 @@
 [alias]
-	ga = "git add"
-	gc = "git commit"
-	gl = "git log"
-	gp = "git push"
-	gs = "git status"
+	a = "add"
+	c = "commit"
+	l = "log"
+	p = "push"
+	s = "status"
 
 [user]
 	email = "super.stas.0978@gmail.com"

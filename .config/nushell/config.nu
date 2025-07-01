@@ -44,8 +44,6 @@ alias eza = eza --icons auto --color auto --git
 # reload config
 alias r = exec nu
 
-$env.EDITOR = "nvim"
-
 # allias for yazi, that also change dir in console
 def --env y [...args] {
   let tmp = (mktemp -t "yazi-cwd.XXXXX")
