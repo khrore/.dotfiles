@@ -1,27 +1,9 @@
-typeset -U path cdpath fpath manpath
-for profile in ${(z)NIX_PROFILES}; do
-  fpath+=($profile/share/zsh/site-functions $profile/share/zsh/$ZSH_VERSION/functions $profile/share/zsh/vendor-completions)
-done
+bindkey -v
 
-autoload -U compinit && compinit
+export HISTSIZE="10000"
+export SAVEHIST="10000"
 
-HISTSIZE="10000"
-SAVEHIST="10000"
-
-HISTFILE="$HOME/.zsh_history"
-mkdir -p "$(dirname "$HISTFILE")"
-EDITOR="nvim"
-
-setopt HIST_FCNTL_LOCK
-unsetopt APPEND_HISTORY
-setopt HIST_IGNORE_DUPS
-unsetopt HIST_IGNORE_ALL_DUPS
-unsetopt HIST_SAVE_NO_DUPS
-unsetopt HIST_FIND_NO_DUPS
-setopt HIST_IGNORE_SPACE
-unsetopt HIST_EXPIRE_DUPS_FIRST
-setopt SHARE_HISTORY
-unsetopt EXTENDED_HISTORY
+export EDITOR="nvim"
 
 if test -n "$KITTY_INSTALLATION_DIR"; then
   export KITTY_SHELL_INTEGRATION="no-rc"
@@ -34,15 +16,15 @@ if [[ -n $GHOSTTY_RESOURCES_DIR ]]; then
   source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
 fi
 
-
 # Alias
 alias -- ..='z ..'
+alias -- ...='z ../..'
 alias -- eza='eza --icons auto --color auto --git'
 alias -- l='eza'
+alias -- ls='eza'
 alias -- la='eza -a'
 alias -- ll='eza -l'
 alias -- lla='eza -la'
-alias -- ls=eza
 alias -- lt='eza --tree'
 
 alias -- gs='git status'
@@ -61,6 +43,7 @@ alias -- upd='nh os switch --update'
 
 alias -- v=nvim
 
+# Save path when closing yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -70,15 +53,18 @@ function y() {
 }
 
 # Plugins
+fpath=(~/.config/zsh/completions/src $fpath)
+source ~/.config/zsh/autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/catppuccin/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+source ~/.config/zsh/vi-mode/zsh-vi-mode.zsh
+
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh )"
 eval "$(fzf --zsh)"
 
+# TODO: find how configure atuin in vi insert and cmd mode in zsh
 export ATUIN_NOBIND="true"
 eval "$(atuin init zsh)"
-bindkey '^r' atuin-search
-
-fpath=(~/.zsh/zsh-completions/src $fpath)
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-catppuccin/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+bindkey '^R' atuin-search-viins -i atuin
+bindkey '^R' atuin-search-vicmd -i atuin

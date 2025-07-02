@@ -7,15 +7,24 @@
 [submodule ".config/tmux/catppuccin-tmux"]
 	path = .config/tmux/catppuccin-tmux
 	url = https://github.com/catppuccin/tmux
-[submodule ".zsh/zsh-autosuggestions"]
-	path = .zsh/zsh-autosuggestions
+[submodule ".config/zsh/autosuggestions"]
+	path = .config/zsh/autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule ".zsh/zsh-completions"]
-	path = .zsh/zsh-completions
+[submodule ".config/zsh/completions"]
+	path = .config/zsh/completions
 	url = https://github.com/zsh-users/zsh-completions
-[submodule ".zsh/zsh-syntax-highlighting"]
-	path = .zsh/zsh-syntax-highlighting
+[submodule ".config/zsh/syntax-highlighting"]
+	path = .config/zsh/syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
-[submodule ".zsh/zsh-catppuccin"]
-	path = .zsh/zsh-catppuccin
+[submodule ".config/zsh/catppuccin"]
+	path = .config/zsh/catppuccin
 	url = https://github.com/catppuccin/zsh-syntax-highlighting
+[submodule ".config/zsh/vi-mode"]
+	path = .config/zsh/vi-mode
+	url = https://github.com/jeffreytse/zsh-vi-mode
+[submodule ".config/bash/ble.sh"]
+	path = .config/bash/ble.sh
+	url = https://github.com/akinomyoga/ble.sh.git
+[submodule ".config/zsh/zsh-syntax-highlighting"]
+	path = .config/zsh/syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting

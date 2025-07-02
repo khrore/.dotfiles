@@ -1,6 +1,6 @@
 # .dotfiles
 
-Configuration of multiple programs
+Personal dotfiles configuration
 
 ## Configured
 
@@ -16,11 +16,13 @@ Configuration of multiple programs
 - Shells
 
   - [nushell](https://github.com/nushell/nushell)
-  - [zsh](https://github.com/ohmyzsh/ohmyzsh/)
+  - bash
+  - [zsh](https://github.com/zsh-users/zsh)
   - [fish](https://github.com/fish-shell/fish-shell)
 
 - Command-line tools
 
+  - git
   - [starship](https://github.com/starship/starship)
   - [yazi](https://github.com/sxyazi/yazi)
   - [btop](https://github.com/aristocratos/btop)
@@ -29,13 +31,12 @@ Configuration of multiple programs
   - [tmux](https://github.com/tmux/tmux)
   - [eza](https://github.com/eza-community/eza)
   - [fzf](https://github.com/junegunn/fzf)
-  - [git](https://github.com/git/git)
   - [spotifyd](https://github.com/Spotifyd/spotifyd)
   - [spotify-player](https://github.com/aome510/spotify-player)
 
-- Window management
+- Window management and tooling
 
-  - [hyrpland](https://github.com/hyprwm/Hyprland)
+  - [hyprland](https://github.com/hyprwm/Hyprland)
   - [waybar](https://github.com/Alexays/Waybar)
   - [hypridle](https://github.com/hyprwm/hypridle)
   - [hyprpaper](https://github.com/hyprwm/hyprpaper)
