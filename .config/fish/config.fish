@@ -16,19 +16,33 @@ if set -q KITTY_INSTALLATION_DIR
 end
 
 # Aliases
-alias eza 'eza --icons auto --color auto --git'
 alias l eza
 alias ls eza
 alias la 'eza -a'
 alias ll 'eza -l'
 alias lla 'eza -la'
 alias lt 'eza --tree'
+alias eza 'eza --icons auto --color auto --git'
 
 alias v nvim
 alias vd 'nvim -d'
 
 alias .. "cd .."
 alias ... "cd ../.."
+
+alias gs 'git status'
+alias gc 'git commit'
+alias gp 'git push'
+alias ga 'git add'
+alias gd 'git diff'
+alias gl 'git log'
+
+alias sw 'nh os switch'
+alias rsw 'nixos-rebuild switch'
+
+# enviroment variables
+export NH_OS_FLAKE="$HOME/nixos"
+export NIXOS_CONFIG="$HOME/nixos"
 
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
