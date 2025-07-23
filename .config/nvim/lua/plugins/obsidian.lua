@@ -22,19 +22,19 @@ return {
 			mode = { "n" },
 		},
 		{
-			"gf",
+			"<leader>of",
 			"<cmd>Obsidian follow_link<cr>",
 			desc = "Follow link",
 			mode = { "n" },
 		},
 		{
-			"gl",
+			"<leader>ol",
 			"<cmd>Obsidian link<cr>",
 			desc = "Link",
 			mode = { "v" },
 		},
 		{
-			"gn",
+			"<leader>on",
 			"<cmd>Obsidian new_link<cr>",
 			desc = "New link",
 			mode = { "v" },
@@ -54,12 +54,8 @@ return {
 		-- current markdown file being edited.
 		workspaces = {
 			{
-				name = "personal",
-				path = "~/vaults/personal",
-			},
-			{
-				name = "work",
-				path = "~/vaults/blockchain",
+				name = "notes",
+				path = "~/vaults/notes",
 			},
 		},
 
@@ -162,7 +158,7 @@ return {
 
 		-- Optional, boolean or a function that takes a filename and returns a boolean.
 		-- `true` indicates that you don't want obsidian.nvim to manage frontmatter.
-		disable_frontmatter = false,
+		disable_frontmatter = true,
 
 		-- Optional, alternatively you can customize the frontmatter data.
 		---@return table

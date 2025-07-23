@@ -37,6 +37,8 @@ alias ga 'git add'
 alias gd 'git diff'
 alias gl 'git log'
 
+alias c clear
+
 alias sw 'nh os switch'
 alias rsw 'nixos-rebuild switch'
 

@@ -22,4 +22,4 @@ _darcs
 ^/COPYING
 
 # User ignore
-/build.sh
+build.sh
