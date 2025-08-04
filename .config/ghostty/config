@@ -7,6 +7,7 @@ font-family = JetBrainsMono Nerd Font
 font-size = 13
 gtk-custom-css = tab-style.css
 gtk-tabs-location = top
+window-decoration = false
 keybind = clear
 keybind = ctrl+a>r=reload_config
 keybind = ctrl+a>equal=increase_font_size:1

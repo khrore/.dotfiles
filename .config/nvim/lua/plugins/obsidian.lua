@@ -94,9 +94,9 @@ return {
 		-- Optional, completion of wiki links, local markdown links, and tags using nvim-cmp.
 		completion = {
 			-- Enables completion using nvim_cmp
-			nvim_cmp = true,
+			nvim_cmp = false,
 			-- Enables completion using blink.cmp
-			blink = false,
+			blink = true,
 			-- Trigger completion at 2 chars.
 			min_chars = 2,
 			-- Set to false to disable new note creation in the picker
@@ -154,7 +154,7 @@ return {
 		end,
 
 		-- Either 'wiki' or 'markdown'.
-		preferred_link_style = "markdown",
+		preferred_link_style = "wiki",
 
 		-- Optional, boolean or a function that takes a filename and returns a boolean.
 		-- `true` indicates that you don't want obsidian.nvim to manage frontmatter.

@@ -25,7 +25,6 @@
     "memory",
     "temperature",
     "backlight",
-    "keyboard-state",
     "hyprland/language",
     "battery",
     "battery#bat2",
@@ -45,22 +44,13 @@
   },
   "hyprland/language": {
     "format": "{}",
-    "format-en": "🇺🇸",
-    "format-ru": "🇷🇺",
+    "format-en": "us",
+    "format-ru": "ru",
     "keyboard-name": "gaming-keyboard"
   },
   "hyprland/window": {
     "format": "{}",
     "separate-outputs": true
-  },
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
-    }
   },
   "mpd": {
     "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -140,43 +130,8 @@
       ""
     ]
   },
-  "battery": {
-    "states": {
-      // "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{capacity}% {icon}",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
-  "battery#bat2": {
-    "bat": "BAT2"
-  },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
-    }
-  },
   "network": {
-    "family": "ipv6",
+    "family": "ipv4",
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-ethernet": "󰈀 {bandwidthUpBits} / {bandwidthDownBits}",
     "format-linked": "{ifname} (No IP)",
