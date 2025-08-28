@@ -42,9 +42,13 @@ alias c clear
 alias sw 'nh os switch'
 alias rsw 'nixos-rebuild switch'
 
+alias zeditor "WAYLAND_DISPLAY='' zed"
+
 # enviroment variables
 export NH_OS_FLAKE="$HOME/nixos"
 export NIXOS_CONFIG="$HOME/nixos"
+export PATH="$PATH:/usr/local/go/bin:/usr/local/nvim-linux-x86_64/bin:$HOME/.local/bin:$HOME/go/bin"
+export ZED_ALLOW_EMULATED_GPU=1
 
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
