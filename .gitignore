@@ -1,0 +1,6 @@
+.config/btop/btop.log
+.config/atuin/atuin-receipt.json
+.config/nvim/lua/plugins/mason.lua
+.config/gh/hosts.yml
+.config/go
+.config/nvim/lazy-lock.json

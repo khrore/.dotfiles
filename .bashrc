@@ -13,3 +13,6 @@ eval "$(fzf --bash)"
 
 # Add this line at the end of .bashrc:
 [[ ! ${BLE_VERSION-} ]] || ble-attach
+
+. "$HOME/.atuin/bin/env"
+. "$HOME/.cargo/env"
