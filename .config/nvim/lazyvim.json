@@ -15,7 +15,8 @@
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.dap.nlua",
-    "lazyvim.plugins.extras.coding.blink"
+    "lazyvim.plugins.extras.coding.blink",
+    "lazyvim.plugins.extras.coding.mini-surround"
   ],
   "news": {
     "NEWS.md": "10960"
