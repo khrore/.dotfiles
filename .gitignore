@@ -4,3 +4,4 @@
 .config/gh/hosts.yml
 .config/go
 .config/nvim/lazy-lock.json
+.config/fish/conf.d
