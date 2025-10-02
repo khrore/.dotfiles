@@ -60,3 +60,4 @@ keybind = ctrl+a>t=toggle_tab_overview
 maximize = true
 mouse-hide-while-typing = true
 theme = light:catppuccin-mocha,dark:catppuccin-mocha
+keybind = shift+enter=text:\x1b\r
