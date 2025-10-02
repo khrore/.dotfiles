@@ -1,0 +1,62 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "VimControl && !menu && vim_mode == normal",
+    "bindings": {
+      // Bindings from default config, if not setted, don't work
+      // Window mode
+      "space w h": "workspace::ActivatePaneLeft",
+      "space w l": "workspace::ActivatePaneRight",
+      "space w k": "workspace::ActivatePaneUp",
+      "space w j": "workspace::ActivatePaneDown",
+      "space w q": "pane::CloseActiveItem",
+      "space w s": "pane::SplitRight",
+      "space w r": "pane::SplitRight",
+      "space w v": "pane::SplitDown",
+      "space w d": "pane::SplitDown",
+      // Space mode
+      "space k": "editor::Hover",
+      "space s": "outline::Toggle",
+      "space shift-s": "project_symbols::Toggle",
+      // "space d": "editor::GoToDiagnostic",
+      "space r": "editor::Rename",
+      // "space a": "editor::ToggleCodeActions",
+      "space h": "editor::SelectAllMatches",
+      "space c": "editor::ToggleComments",
+      "shift-u": "editor::Redo",
+      // Bindings from LazyVim and NeoVim
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "space space": "file_finder::Toggle",
+      "space q": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "VimControl && vim_mode == normal",
+    "bindings": {
+      // Workspace control
+      "ctrl-w o": "workspace::CloseAllDocks",
+      "ctrl-w ctrl-o": "workspace::CloseAllDocks",
+      "ctrl-w f": "workspace::ActivatePreviousPane",
+      "ctrl-w ctrl-f": "workspace::ActivatePreviousPane",
+      "ctrl-w b": "pane::CloseOtherItems",
+      "ctrl-w ctrl-b": "pane::CloseOtherItems",
+      "space /": "pane::DeploySearch",
+      "space f": "workspace::ActivatePreviousPane",
+      "space o": "workspace::CloseAllDocks",
+      "space p": "command_palette::Toggle",
+      "space m": "diagnostics::Deploy",
+      "space e": "project_panel::ToggleFocus",
+      "space b": "outline_panel::ToggleFocus",
+      "space g": "git_panel::ToggleFocus",
+      "space d": "debug_panel::ToggleFocus",
+      "space a": "agent::ToggleFocus"
+    }
+  }
+]
