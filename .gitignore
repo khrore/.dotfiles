@@ -5,3 +5,5 @@
 .config/go
 .config/nvim/lazy-lock.json
 .config/fish/conf.d
+.config/obsidian
+.config/dconf
