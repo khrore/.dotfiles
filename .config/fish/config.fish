@@ -73,3 +73,15 @@ function fish_user_key_bindings
     # The argument specifies the initial mode (insert, "default" or visual).
     fish_vi_key_bindings --no-erase insert
 end
+
+set SESSION_NAME = dev
+
+if test -s $DISPLAY
+    if not test -s "$TMUX"
+        if tmux has-session -t $SESSION_NAME 2>/dev/null
+            tmux attach -t $SESSION_NAME
+        else
+            tmux new -s $SESSION_NAME
+        end
+    end
+end
