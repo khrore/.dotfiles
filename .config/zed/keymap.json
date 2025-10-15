@@ -70,6 +70,12 @@
       "space h": "editor::ToggleSelectedDiffHunks"
     }
   },
+  {
+    "context": "Editor && (VimControl && vim_mode == visual)",
+    "bindings": {
+      "space m": "editor::SelectAllMatches"
+    }
+  },
   // AI agent diff view: accept/reject suggestions
   {
     "context": "Editor && editor_agent_diff",
@@ -92,7 +98,7 @@
       "space f": "agent::Follow",
       "space m n": "agent::ToggleNavigationMenu",
       "space m o": "agent::ToggleOptionsMenu",
-      "space r m": "agent::RemoveAllContext",
+      "space r": "agent::RemoveAllContext",
       "space enter": "agent::ContinueThread",
       "space b": "agent::ToggleBurnMode",
       "space shift-b": "agent::ContinueWithBurnMode",
