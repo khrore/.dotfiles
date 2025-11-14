@@ -8,3 +8,12 @@
 .config/obsidian
 .config/dconf
 .config/fish/fish_variables
+.config/mozilla
+.config/BraveSoftware
+.config/nekoray
+.config/pulse
+.config/pypoetry
+
+.config/clipse/clipboard_history.json
+.config/clipse/clipse.log
+.config/clipse/tmp_files
