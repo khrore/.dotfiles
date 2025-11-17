@@ -3,9 +3,14 @@
 // To see the default key bindings run `zed: open default keymap`
 //
 [
+  {
+    "bindings": {
+      "ctrl-w": null
+    }
+  },
   // Global Vim normal mode: buffer navigation, window management, pane navigation, panel toggles
   {
-    "context": "VimControl && vim_mode == normal",
+    "context": "(VimControl && vim_mode == normal) || KeyContextView",
     "bindings": {
       "shift-h": "pane::ActivatePreviousItem",
       "shift-l": "pane::ActivateNextItem",
@@ -27,7 +32,7 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "space space": "file_finder::Toggle",
       "space /": "pane::DeploySearch",
-      "space o": "workspace::CloseAllDocks",
+      "space b o": "workspace::CloseInactiveTabsAndPanes",
       "space f n": "workspace::NewFile",
       "space w m": "diagnostics::Deploy",
       "space w e": "project_panel::ToggleFocus",
@@ -52,10 +57,10 @@
   {
     "context": "Editor && (VimControl && vim_mode == normal)",
     "bindings": {
-      "space a": "editor::ToggleCodeActions",
-      "space f": "editor::Format",
-      "space r": "editor::Rename",
-      "space d": "editor::GoToDefinition",
+      "space c a": "editor::ToggleCodeActions",
+      "space c f": "editor::Format",
+      "space c r": "editor::Rename",
+      "space c d": "editor::GoToDefinition",
       "space shift-d": "editor::GoToTypeDefinition",
       "space l": "editor::FindAllReferences",
       "space i": "editor::GoToImplementation",
@@ -67,7 +72,13 @@
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp",
       "space b": "git::Blame",
-      "space h": "editor::ToggleSelectedDiffHunks"
+      "space h": "editor::ToggleSelectedDiffHunks",
+
+      "] d": "project_panel::SelectNextDiagnostic",
+      "[ d": "project_panel::SelectPrevDiagnostic",
+
+      "space -": "project_panel::OpenSplitHorizontal",
+      "space |": "project_panel::OpenSplitVertical"
     }
   },
   {
@@ -115,6 +126,10 @@
       "j": "menu::SelectNext",
       "k": "menu::SelectPrevious"
     }
+  },
+  {
+    "context": "GitPannel && vim_mode == normal",
+    "bindings": {}
   },
   // Project panel: Yazi-style file operations (copy, paste, delete, rename, etc.)
   {
