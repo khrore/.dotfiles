@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "formatter": {
+    "rustfmt": {
+      "command": [
+        "rustfmt",
+        "--edition",
+        "2024",
+        "$FILE"
+      ],
+      "extensions": [
+        ".rs"
+      ]
+    }
+  },
+  "permission": {
+    "edit": "ask",
+    "bash": "ask",
+    "webfetch": "allow",
+    "doom_loop": "ask",
+    "external_directory": "ask"
+  }
+}
