@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "theme": "catppuccin",
   "formatter": {
     "rustfmt": {
       "command": [
@@ -13,11 +14,19 @@
       ]
     }
   },
-  "permission": {
-    "edit": "ask",
-    "bash": "ask",
-    "webfetch": "allow",
-    "doom_loop": "ask",
-    "external_directory": "ask"
-  }
+  "lsp": {
+    "pyright": {
+      "disabled": true
+    },
+    "basedpyright": {
+      "command": [
+        "ruff",
+        "server"
+      ],
+      "extensions": [
+        ".py",
+        ".pyi"
+      ]
+    }
+  },
 }
