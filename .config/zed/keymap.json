@@ -10,12 +10,14 @@
   },
   // Global Vim normal mode: buffer navigation, window management, pane navigation, panel toggles
   {
-    "context": "(VimControl && vim_mode == normal) || KeyContextView",
+    "context": "(VimControl && vim_mode == normal) || KeyContextView || GitPanel",
     "bindings": {
       "shift-h": "pane::ActivatePreviousItem",
       "shift-l": "pane::ActivateNextItem",
+
       "[ b": "pane::ActivatePreviousItem",
       "] b": "pane::ActivateNextItem",
+
       "ctrl-w o": "pane::JoinAll",
       "ctrl-w ctrl-o": "pane::JoinAll",
       "ctrl-w f": "workspace::ActivatePreviousPane",
@@ -30,10 +32,17 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
+
       "space space": "file_finder::Toggle",
       "space /": "pane::DeploySearch",
-      "space b o": "workspace::CloseInactiveTabsAndPanes",
+
+      "space b d": "pane::CloseActiveItem",
+      "space b o": "pane::CloseOtherItems",
+      "space b O": "pane::CloseCleanItems",
+
+      "space b a": "pane::AlternateFile",
       "space f n": "workspace::NewFile",
+
       "space x": "diagnostics::Deploy",
       "space e": "project_panel::ToggleFocus",
       "space o": "outline_panel::ToggleFocus",
@@ -110,7 +119,6 @@
       "space ,": "agent::OpenSettings",
       "space l": "agent::OpenRulesLibrary",
       "space f": "agent::Follow",
-      "space r": "agent::RemoveAllContext",
       "space enter": "agent::ContinueThread",
       "space y": "agent::AllowOnce",
       "space shift-y": "agent::AllowAlways",

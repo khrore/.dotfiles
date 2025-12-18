@@ -18,7 +18,7 @@
     "pyright": {
       "disabled": true
     },
-    "basedpyright": {
+    "ruff": {
       "command": [
         "ruff",
         "server"
