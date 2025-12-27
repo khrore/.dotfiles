@@ -59,7 +59,7 @@ end
 # Interactive shell initialisation
 fzf --fish | source
 zoxide init fish | source
-# atuin init fish | source
+atuin init fish | source
 starship init fish | source
 
 # enable vi mode
@@ -74,10 +74,14 @@ function fish_user_key_bindings
     fish_vi_key_bindings --no-erase insert
 end
 
-set SESSION_NAME = dev
+# Auto-attach to tmux session in graphical environments
+set SESSION_NAME dev
 
-if test -s $DISPLAY
-    if not test -s "$TMUX"
+# Auto-start Hyprland on TTY1 if not in a graphical session
+if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+    exec start-hyprland
+else
+    if not test -n "$TMUX"
         if tmux has-session -t $SESSION_NAME 2>/dev/null
             tmux attach -t $SESSION_NAME
         else
