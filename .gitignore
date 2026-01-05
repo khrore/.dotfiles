@@ -31,3 +31,11 @@
 .config/nvim/lazy-lock.json
 
 .config/QtProject.conf
+
+.claude/.credentials.json
+.claude/debug/
+.claude/history.jsonl
+.claude/plugins/
+.claude/projects/
+.claude/statsig/
+.claude/todos/
