@@ -42,5 +42,6 @@
 .claude/stats-cache.json
 .claude/statsig/
 .claude/todos/
+.claude/.credentials.json
 
 .config/zed/prompts
