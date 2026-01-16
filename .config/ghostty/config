@@ -10,5 +10,5 @@ gtk-tabs-location = top
 maximize = true
 mouse-hide-while-typing = true
 theme = light:catppuccin-mocha,dark:catppuccin-mocha
-keybind = shift+enter=text:\x1b\r
 command = /run/current-system/sw/bin/fish --login --interactive
+keybind = shift+enter=text:\x1b\r

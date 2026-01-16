@@ -34,7 +34,6 @@
 
 .claude/debug/
 .claude/file-history/
-.claude/history.jsonl
 .claude/plans/
 .claude/plugins/
 .claude/projects/
@@ -42,6 +41,8 @@
 .claude/stats-cache.json
 .claude/statsig/
 .claude/todos/
+.claude/telemetry
+.claude/history.jsonl
 .claude/.credentials.json
 
 .config/zed/prompts
