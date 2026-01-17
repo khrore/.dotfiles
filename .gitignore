@@ -42,6 +42,7 @@
 .claude/statsig/
 .claude/todos/
 .claude/telemetry
+.claude/cache
 .claude/history.jsonl
 .claude/.credentials.json
 
