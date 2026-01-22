@@ -31,3 +31,11 @@
 .config/nvim/lazy-lock.json
 
 .config/QtProject.conf
+
+.config/AFFiNE
+
+.config/environment.d
+.config/fontconfig
+.config/obs-studio/
+.config/systemd/
+.config/xdg-desktop-portal/
