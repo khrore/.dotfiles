@@ -27,11 +27,13 @@ The configuration follows a modular structure where `hyprland.conf` acts as the 
    - `hyprlock.conf` - Lock screen appearance and configuration
    - `hyprpaper.conf` - Wallpaper settings
 
-4. **Theme System** (`themes/` directory):
-   - Multiple Catppuccin theme variants: mocha, latte, macchiato, frappe
-   - Each theme defines color variables used throughout the configuration
-   - Currently active theme: mocha (Catppuccin Mocha - dark theme)
-   - Theme colors are referenced using `$` variables (e.g., `$sapphire`, `$surface0`, `$blue`)
+4. **Theme System**:
+   - Centralized theme directory: `~/.config/themes/gruvbox/`
+   - Currently active theme: Gruvbox Dark
+   - Theme sourced from: `~/.config/themes/gruvbox/hyprland.conf`
+   - Theme colors are referenced using `$` variables (e.g., `$orange`, `$bg1`, `$blue`, `$red`)
+   - Gruvbox color palette includes: background shades ($bg0-$bg4), foreground shades ($fg0-$fg4),
+     bright colors ($red, $green, $yellow, $blue, $purple, $aqua, $orange), and neutral variants
 
 ## Key Configuration Details
 
@@ -87,7 +89,7 @@ hyprctl dispatch <dispatcher> <args>
 ## Common Modifications
 
 When modifying this configuration:
-- **Changing theme**: Edit the first line in `hyprland.conf` to source a different theme file
+- **Changing theme**: Edit the first line in `hyprland.conf` to source `~/.config/themes/<theme-name>/hyprland.conf`
 - **Adding keybindings**: Edit `hyprland/bind.conf`
 - **Modifying appearance**: Edit `hyprland/visual.conf` (animations, blur, rounding)
 - **Changing gaps/borders**: Edit `hyprland/general.conf`
@@ -97,6 +99,9 @@ When modifying this configuration:
 
 ## Color Variable System
 
-The theme files define color variables in both `rgb()` and alpha formats. When using colors in configuration:
-- For border colors, use: `$colorname` (e.g., `$sapphire`)
-- For alpha values in labels/text, use: `##$colornameAlpha` (e.g., `##$blueAlpha`)
+The Gruvbox theme file defines color variables in both `rgb()` and alpha formats. When using colors in configuration:
+- For border colors, use: `$colorname` (e.g., `$orange`, `$blue`)
+- For alpha values in labels/text, use: `##$colornameAlpha` (e.g., `##$blueAlpha`, `##$orangeAlpha`)
+- Main accent color: `$orange` (#fe8019)
+- Background shades: `$bg0` (darkest) through `$bg4` (lightest)
+- Foreground shades: `$fg0` (brightest) through `$fg4` (dimmest)
