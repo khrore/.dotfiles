@@ -56,8 +56,32 @@ function y() {
 fpath=(~/.config/zsh/completions/src $fpath)
 source ~/.config/zsh/autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.config/zsh/catppuccin/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+# Gruvbox colors are now handled by ZSH_HIGHLIGHT_STYLES below
 source ~/.config/zsh/vi-mode/zsh-vi-mode.zsh
+
+# Gruvbox Dark colors for zsh-syntax-highlighting
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[default]='fg=#ebdbb2'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#fb4934'
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=#fe8019'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#b8bb26'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=#b8bb26'
+ZSH_HIGHLIGHT_STYLES[function]='fg=#b8bb26'
+ZSH_HIGHLIGHT_STYLES[command]='fg=#b8bb26'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=#83a598'
+ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=#fe8019'
+ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=#b8bb26'
+ZSH_HIGHLIGHT_STYLES[path]='fg=#ebdbb2'
+ZSH_HIGHLIGHT_STYLES[globbing]='fg=#d3869b'
+ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=#d3869b'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=#fe8019'
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=#fe8019'
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=#d3869b'
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#fabd2f'
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#fabd2f'
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]='fg=#8ec07c'
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=#8ec07c'
+ZSH_HIGHLIGHT_STYLES[assign]='fg=#ebdbb2'
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh )"

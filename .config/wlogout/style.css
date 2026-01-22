@@ -1,13 +1,13 @@
-@import "catppuccin-wlogout/themes/mocha/blue.css";
+@import "../themes/gruvbox/wlogout.css";
 
 #hibernate {
-  background-image: url("catppuccin-wlogout/icons/wlogout/mocha/blue/hibernate.svg");
+  background-image: url("/usr/share/wlogout/icons/hibernate.png");
 }
 #lock {
-  background-image: url("catppuccin-wlogout/icons/wlogout/mocha/blue/lock.svg");
+  background-image: url("/usr/share/wlogout/icons/lock.png");
 }
 #logout {
-  background-image: url("catppuccin-wlogout/icons/wlogout/mocha/blue/logout.svg");
+  background-image: url("/usr/share/wlogout/icons/logout.png");
 }
 #reboot {
   background-image: url("catppuccin-wlogout/icons/wlogout/mocha/blue/reboot.svg");

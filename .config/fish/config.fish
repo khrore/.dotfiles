@@ -1,5 +1,5 @@
 # Coloring Catppuccin theme
-fish_config theme choose "Catppuccin Mocha"
+fish_config theme choose "Gruvbox Dark"
 
 # disable fish hello
 set -g fish_greeting ""
