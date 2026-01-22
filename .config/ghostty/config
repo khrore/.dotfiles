@@ -9,6 +9,6 @@ gtk-custom-css = tab-style.css
 gtk-tabs-location = top
 maximize = true
 mouse-hide-while-typing = true
-theme = light:../themes/gruvbox/ghostty,dark:../themes/gruvbox/ghostty
+theme = Gruvbox Dark Hard
 command = /run/current-system/sw/bin/fish --login --interactive
 keybind = shift+enter=text:\x1b\r
