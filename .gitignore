@@ -53,5 +53,6 @@
 .claude/cache
 .claude/history.jsonl
 .claude/.credentials.json
+.claude/analysis
 
 .config/zed/prompts

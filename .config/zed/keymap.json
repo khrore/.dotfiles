@@ -3,11 +3,6 @@
 // To see the default key bindings run `zed: open default keymap`
 //
 [
-  {
-    "bindings": {
-      "ctrl-w": null
-    }
-  },
   // Global Vim normal mode: buffer navigation, window management, pane navigation, panel toggles
   {
     "context": "(VimControl && vim_mode == normal) || KeyContextView || GitPanel",
@@ -51,16 +46,31 @@
       "space a": "agent::ToggleFocus",
       "space p": "notification_panel::ToggleFocus",
       "space c": "collab_panel::ToggleFocus",
-      "space t": "terminal_panel::ToggleFocus"
-    }
+      "space t": "terminal_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "(VimControl && vim_mode == normal) || KeyContextView || GitPanel && os==macos",
+    "bindings": {
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8],
+      "cmd-0": "pane::ActivateLastItem",
+    },
   },
   // Dock/panel specific: close dock or return focus to editor
   {
     "context": "Dock > (VimControl && vim_mode == normal)",
     "bindings": {
       "q": "workspace::CloseActiveDock",
-      "shift-q": "editor::ToggleFocus"
-    }
+      "shift-q": "editor::ToggleFocus",
+    },
   },
   // Editor specific: code actions, LSP navigation, formatting, git integration
   {
@@ -69,9 +79,6 @@
       "space c a": "editor::ToggleCodeActions",
       "space c f": "editor::Format",
       "space c r": "editor::Rename",
-      "g r": "editor::FindAllReferences",
-      "g i": "editor::GoToImplementation",
-      "g d": "editor::GoToDefinition",
       "g t d": "editor::GoToTypeDefinition",
       "g c c": "editor::ToggleComments",
       "shift-k": "editor::Hover",
@@ -86,14 +93,21 @@
       "[ d": "project_panel::SelectPrevDiagnostic",
 
       "space -": "project_panel::OpenSplitHorizontal",
-      "space |": "project_panel::OpenSplitVertical"
-    }
+      "space |": "project_panel::OpenSplitVertical",
+    },
+  },
+  {
+    "context": "Editor && (VimControl && vim_mode == normal) && os==macos",
+    "bindings": {
+      "cmd-j": "editor::MoveLineDown",
+      "cmd-k": "editor::MoveLineUp",
+    },
   },
   {
     "context": "Editor && (VimControl && vim_mode == visual)",
     "bindings": {
-      "space m": "editor::SelectAllMatches"
-    }
+      "space m": "editor::SelectAllMatches",
+    },
   },
   // AI agent diff view: accept/reject suggestions
   {
@@ -103,8 +117,8 @@
       "space n": "agent::Reject",
       "space shift-y": "agent::KeepAll",
       "space shift-n": "agent::RejectAll",
-      "space shift-r": "agent::OpenAgentDiff"
-    }
+      "space shift-r": "agent::OpenAgentDiff",
+    },
   },
   // AI agent message editor: thread management, settings, permissions
   {
@@ -122,8 +136,8 @@
       "space enter": "agent::ContinueThread",
       "space y": "agent::AllowOnce",
       "space shift-y": "agent::AllowAlways",
-      "space n": "agent::RejectOnce"
-    }
+      "space n": "agent::RejectOnce",
+    },
   },
   // Agent panel navigation menu: Vim-style j/k movement
   {
@@ -131,12 +145,12 @@
     "use_key_equivalents": true,
     "bindings": {
       "j": "menu::SelectNext",
-      "k": "menu::SelectPrevious"
-    }
+      "k": "menu::SelectPrevious",
+    },
   },
   {
     "context": "GitPannel && vim_mode == normal",
-    "bindings": {}
+    "bindings": {},
   },
   // Project panel: Yazi-style file operations (copy, paste, delete, rename, etc.)
   {
@@ -156,8 +170,8 @@
       "c c": "workspace::CopyPath",
       "c r": "workspace::CopyRelativePath",
       "shift-j": "menu::SelectNext",
-      "shift-k": "menu::SelectPrevious"
-    }
+      "shift-k": "menu::SelectPrevious",
+    },
   },
   // Terminal: page scrolling with ctrl-u/d
   {
@@ -166,7 +180,7 @@
     "bindings": {
       "q": "terminal_panel::Toggle",
       "ctrl-u": "terminal::ScrollPageUp",
-      "ctrl-d": "terminal::ScrollPageDown"
-    }
-  }
+      "ctrl-d": "terminal::ScrollPageDown",
+    },
+  },
 ]
