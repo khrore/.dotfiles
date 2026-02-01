@@ -55,4 +55,6 @@
 .claude/.credentials.json
 .claude/analysis
 
+.config/spotify
+
 .config/zed/prompts
