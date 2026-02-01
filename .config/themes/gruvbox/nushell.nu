@@ -39,12 +39,18 @@ export def main [] { {
     nothing: "#a89984"
     binary: "#a89984"
     cellpath: "#a89984"
-    row_index: { fg: "#b8bb26" attr: b }
+    row_index: { fg: "#a89984" attr: n }
     record: "#a89984"
     list: "#a89984"
     block: "#a89984"
     hints: "dark_gray"
     search_result: { fg: "#fb4934" bg: "#a89984" }
+
+    # Table elements - for consistent ls output appearance
+    table_row_even: { fg: "#ebdbb2" bg: "#282828" }
+    table_row_odd: { fg: "#ebdbb2" bg: "#32302f" }
+    table_header_separator: "#a89984"
+    table_cell_separator: "#a89984"
 
     shape_and: { fg: "#d3869b" attr: b }
     shape_binary: { fg: "#d3869b" attr: b }
@@ -55,7 +61,7 @@ export def main [] { {
     shape_directory: "#8ec07c"
     shape_external: "#8ec07c"
     shape_externalarg: { fg: "#b8bb26" attr: b }
-    shape_filepath: "#8ec07c"
+    shape_filepath: "#a89984"  # Changed to match string color for consistency
     shape_flag: { fg: "#83a598" attr: b }
     shape_float: { fg: "#d3869b" attr: b }
     shape_garbage: { fg: "#FFFFFF" bg: "#FB4934" attr: b }
@@ -74,8 +80,8 @@ export def main [] { {
     shape_record: { fg: "#8ec07c" attr: b }
     shape_redirection: { fg: "#d3869b" attr: b }
     shape_signature: { fg: "#b8bb26" attr: b }
-    shape_string: "#b8bb26"
-    shape_string_interpolation: { fg: "#8ec07c" attr: b }
+    shape_string: "#a89984"  # Changed to match string color for consistency
+    shape_string_interpolation: { fg: "#b8bb26" attr: n }
     shape_table: { fg: "#83a598" attr: b }
     shape_variable: "#d3869b"
 
